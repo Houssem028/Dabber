@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b2d68">
+  <meta name="description" content="Dabber — plateforme de location simple et rapide.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Dabber — Location</title>
+</head>
+<body>
+  <div id="splash" class="splash">
+    <img src="logo.png" alt="Dabber">
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo.png" alt="Dabber">
+    </div>
+    <button id="langBtn" class="lang-btn" aria-label="Changer la langue">العربية 🇹🇳</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow" data-fr="Trouvez • Louez • Profitez" data-ar="إبحث • اكري • استمتع"></span>
+        <h1 data-fr="Tout ce dont vous avez besoin, à louer." data-ar="كل ما تحتاجه، للكراء."></h1>
+        <p data-fr="Trouvez facilement des logements, voitures, équipements et bien plus près de chez vous."
+           data-ar="إلقى بسهولة شقق، سيارات، معدات وحاجات أكثر قريبة ليك."></p>
+
+        <div class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search"
+                 data-placeholder-fr="Que cherchez-vous à louer ?"
+                 data-placeholder-ar="شنوّة تحب تكرّي؟"
+                 placeholder="Que cherchez-vous à louer ?">
+          <button id="searchBtn">⌕</button>
+        </div>
+
+        <div class="location">⌖ <span data-fr="Près de vous" data-ar="قريب ليك"></span> <b>•</b> Tunis</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-fr="Catégories" data-ar="التصنيفات"></h2>
+        <button class="see-all" data-fr="Voir tout" data-ar="الكل"></button>
+      </div>
+      <div class="categories" id="categories"></div>
+    </section>
+
+    <section class="section listings-section">
+      <div class="section-head">
+        <h2 data-fr="Annonces populaires" data-ar="إعلانات مميزة"></h2>
+        <button class="see-all" data-fr="Plus" data-ar="المزيد"></button>
+      </div>
+      <div class="listings" id="listings"></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="active"><span>⌂</span><small data-fr="Accueil" data-ar="الرئيسية"></small></button>
+    <button><span>⌕</span><small data-fr="Recherche" data-ar="بحث"></small></button>
+    <button class="add"><span>＋</span><small data-fr="Publier" data-ar="نشر"></small></button>
+    <button><span>♡</span><small data-fr="Favoris" data-ar="المفضلة"></small></button>
+    <button><span>♙</span><small data-fr="Compte" data-ar="حسابي"></small></button>
+  </nav>
+
+  <div id="installBox" class="install-box hidden">
+    <div>
+      <strong data-fr="Installer Dabber" data-ar="ثبّت Dabber"></strong>
+      <span data-fr="Ajoutez Dabber à votre écran d’accueil." data-ar="أضف Dabber إلى الشاشة الرئيسية."></span>
+    </div>
+    <button id="installBtn">＋</button>
+  </div>
+
+<script>
+const translations = {
+  fr: { lang: "ar", htmlLang: "fr", dir:"ltr" },
+  ar: { lang: "fr", htmlLang: "ar", dir:"rtl" }
+};
+let currentLang = localStorage.getItem("dabberLang") || "fr";
+
+const categories = [
+  ["🏠","Logements","سكن"],
+  ["🚗","Voitures","سيارات"],
+  ["🛋️","Meubles","أثاث"],
+  ["🛠️","Matériel","معدات"],
+  ["📱","Électronique","إلكترونيات"],
+  ["🎉","Événementiel","مناسبات"]
+];
+
+const listings = [
+  ["🏠","Appartement moderne","Tunis","80 DT / nuit","Logement","سكن"],
+  ["🚗","SUV confortable","Tunis","180 DT / jour","Voiture","سيارة"],
+  ["🛠️","Perceuse professionnelle","Ariana","25 DT / jour","Matériel","معدات"],
+  ["🛋️","Salon complet","Ben Arous","50 DT / jour","Meubles","أثاث"]
+];
+
+function applyLanguage() {
+  const l = currentLang;
+  document.documentElement.lang = translations[l].htmlLang;
+  document.documentElement.dir = translations[l].dir;
+  document.querySelectorAll("[data-fr]").forEach(el => {
+    el.textContent = el.dataset[l];
+  });
+  const input = document.getElementById("searchInput");
+  input.placeholder = input.dataset["placeholder-" + l];
+  document.getElementById("langBtn").textContent = l === "fr" ? "العربية 🇹🇳" : "Français 🇫🇷";
+  renderCategories();
+  renderListings();
+}
+
+function renderCategories() {
+  const box = document.getElementById("categories");
+  box.innerHTML = categories.map(c =>
+    `<button class="cat" data-search="${currentLang==='fr'?c[1]:c[2]}">
+      <span>${c[0]}</span><b>${currentLang==='fr'?c[1]:c[2]}</b>
+    </button>`).join("");
+}
+
+function renderListings(filter="") {
+  const box = document.getElementById("listings");
+  const arr = listings.filter(x => !filter || x.join(" ").toLowerCase().includes(filter.toLowerCase()));
+  box.innerHTML = arr.length ? arr.map(x => `
+    <article class="card">
+      <div class="card-image">${x[0]}<button class="heart">♡</button></div>
+      <div class="card-body">
+        <div class="tag">${currentLang==='fr'?x[4]:x[5]}</div>
+        <h3>${x[1]}</h3>
+        <p>⌖ ${x[2]}</p>
+        <strong>${x[3]}</strong>
+      </div>
+    </article>`).join("") :
+    `<div class="empty">${currentLang==='fr'?"Aucune annonce trouvée.":"ما لقيناش إعلانات."}</div>`;
+}
+
+document.getElementById("langBtn").onclick = () => {
+  currentLang = currentLang === "fr" ? "ar" : "fr";
+  localStorage.setItem("dabberLang", currentLang);
+  applyLanguage();
+};
+
+document.getElementById("searchBtn").onclick = () => renderListings(document.getElementById("searchInput").value);
+document.getElementById("searchInput").addEventListener("keydown", e => {
+  if(e.key==="Enter") renderListings(e.target.value);
+});
+document.addEventListener("click", e => {
+  const cat = e.target.closest(".cat");
+  if(cat) {
+    document.getElementById("searchInput").value = cat.dataset.search;
+    renderListings(cat.dataset.search);
+    document.querySelector(".listings-section").scrollIntoView({behavior:"smooth"});
+  }
+});
+
+let deferredPrompt;
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("installBox").classList.remove("hidden");
+});
+document.getElementById("installBtn").onclick = async () => {
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt();
+  deferredPrompt = null;
+  document.getElementById("installBox").classList.add("hidden");
+};
+
+window.addEventListener("load", () => {
+  applyLanguage();
+  setTimeout(() => document.getElementById("splash").classList.add("hide"), 700);
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+});
+</script>
+</body>
+</html>
