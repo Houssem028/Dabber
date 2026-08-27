@@ -1,0 +1,12 @@
+{
+  "name": "Dabber — Location",
+  "short_name": "Dabber",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#0b2d68",
+  "lang": "fr",
+  "icons": [
+    {"src":"logo.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}
