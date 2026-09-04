@@ -2,23 +2,15 @@
 <html lang="fr" dir="ltr">
 
 <head>
-
   <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1,viewport-fit=cover"
-  >
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-  <meta
-    name="theme-color"
-    content="#0b2d68"
-  >
+  <meta name="theme-color" content="#0b2d68">
 
-  <meta
-    name="description"
-    content="Dabber — plateforme de location simple et rapide."
-  >
+  <meta name="description"
+        content="Dabber — plateforme de location simple et rapide.">
 
   <link rel="manifest" href="manifest.json">
 
@@ -27,43 +19,26 @@
   <link rel="stylesheet" href="style.css">
 
   <title>Dabber — Location</title>
-
 </head>
-
 
 <body>
 
   <!-- SPLASH -->
-
   <div id="splash" class="splash">
-
-    <img
-      src="logo.png"
-      alt="Dabber"
-    >
-
+    <img src="logo.png" alt="Dabber">
   </div>
 
 
-  <!-- TOP BAR -->
-
+  <!-- TOPBAR -->
   <header class="topbar">
 
     <div class="brand">
-
-      <img
-        src="logo.png"
-        alt="Dabber"
-      >
-
+      <img src="logo.png" alt="Dabber">
     </div>
 
-
-    <button
-      id="langBtn"
-      class="lang-btn"
-      aria-label="Changer la langue"
-    >
+    <button id="langBtn"
+            class="lang-btn"
+            type="button">
       العربية 🇹🇳
     </button>
 
@@ -72,34 +47,26 @@
 
   <main>
 
-
     <!-- HERO -->
-
     <section class="hero">
 
       <div class="hero-content">
 
-        <span
-          class="eyebrow"
-          data-fr="Trouvez • Louez • Profitez"
-          data-ar="إبحث • اكري • استمتع"
-        ></span>
+        <span class="eyebrow"
+              data-fr="Trouvez • Louez • Profitez"
+              data-ar="إبحث • اكري • استمتع">
+        </span>
 
+        <h1 data-fr="Tout ce dont vous avez besoin, à louer."
+            data-ar="كل ما تحتاجه، للكراء.">
+        </h1>
 
-        <h1
-          data-fr="Tout ce dont vous avez besoin, à louer."
-          data-ar="كل ما تحتاجه، للكراء."
-        ></h1>
-
-
-        <p
-          data-fr="Trouvez facilement des logements, voitures, équipements et bien plus près de chez vous."
-          data-ar="إلقى بسهولة شقق، سيارات، معدات وحاجات أكثر قريبة ليك."
-        ></p>
+        <p data-fr="Trouvez facilement des logements, voitures, équipements et bien plus près de chez vous."
+           data-ar="إلقى بسهولة شقق، سيارات، معدات وحاجات أكثر قريبة ليك.">
+        </p>
 
 
         <!-- SEARCH -->
-
         <div class="search">
 
           <span>⌕</span>
@@ -109,10 +76,9 @@
             type="search"
             data-placeholder-fr="Que cherchez-vous à louer ?"
             data-placeholder-ar="شنوّة تحب تكرّي؟"
-            placeholder="Que cherchez-vous à louer ?"
-          >
+            placeholder="Que cherchez-vous à louer ?">
 
-          <button id="searchBtn">
+          <button id="searchBtn" type="button">
             ⌕
           </button>
 
@@ -120,15 +86,13 @@
 
 
         <!-- LOCATION -->
-
         <div class="location">
 
           ⌖
 
-          <span
-            data-fr="Près de vous"
-            data-ar="قريب ليك"
-          ></span>
+          <span data-fr="Près de vous"
+                data-ar="قريب ليك">
+          </span>
 
           <b>•</b>
 
@@ -141,40 +105,34 @@
     </section>
 
 
-
     <!-- CATEGORIES -->
-
     <section class="section">
 
       <div class="section-head">
 
-        <h2
-          data-fr="Catégories"
-          data-ar="التصنيفات"
-        ></h2>
-
+        <h2 data-fr="Catégories"
+            data-ar="التصنيفات">
+        </h2>
 
         <button
           class="see-all"
           id="seeCategories"
+          type="button"
           data-fr="Voir tout"
-          data-ar="الكل"
-        ></button>
+          data-ar="الكل">
+        </button>
 
       </div>
 
-
       <div
         class="categories"
-        id="categories"
-      ></div>
+        id="categories">
+      </div>
 
     </section>
 
 
-
     <!-- LISTINGS -->
-
     <section class="section listings-section">
 
       <div class="section-head">
@@ -182,163 +140,148 @@
         <h2
           id="listingsTitle"
           data-fr="Annonces populaires"
-          data-ar="إعلانات مميزة"
-        ></h2>
-
+          data-ar="إعلانات مميزة">
+        </h2>
 
         <button
           class="see-all"
           id="showAll"
+          type="button"
           data-fr="Plus"
-          data-ar="المزيد"
-        ></button>
+          data-ar="المزيد">
+        </button>
 
       </div>
 
-
       <div
         class="listings"
-        id="listings"
-      ></div>
+        id="listings">
+      </div>
 
     </section>
 
   </main>
 
 
-
   <!-- BOTTOM NAV -->
-
   <nav class="bottom-nav">
-
-
-    <!-- HOME -->
 
     <button
       class="active"
       id="homeBtn"
-    >
+      type="button">
 
       <span>⌂</span>
 
       <small
         data-fr="Accueil"
-        data-ar="الرئيسية"
-      ></small>
+        data-ar="الرئيسية">
+      </small>
 
     </button>
 
 
-    <!-- SEARCH -->
-
-    <button id="bottomSearch">
+    <button
+      id="bottomSearch"
+      type="button">
 
       <span>⌕</span>
 
       <small
         data-fr="Recherche"
-        data-ar="بحث"
-      ></small>
+        data-ar="بحث">
+      </small>
 
     </button>
 
 
-    <!-- ADD -->
-
     <button
       class="add"
       id="addBtn"
-    >
+      type="button">
 
       <span>＋</span>
 
       <small
         data-fr="Publier"
-        data-ar="نشر"
-      ></small>
+        data-ar="نشر">
+      </small>
 
     </button>
 
 
-    <!-- FAVORITES -->
-
-    <button id="favoritesBtn">
+    <button
+      id="favoritesBtn"
+      type="button">
 
       <span>♡</span>
 
       <small
         data-fr="Favoris"
-        data-ar="المفضلة"
-      ></small>
+        data-ar="المفضلة">
+      </small>
 
     </button>
 
 
-    <!-- ACCOUNT -->
-
-    <button id="accountBtn">
+    <button
+      id="accountBtn"
+      type="button">
 
       <span>♙</span>
 
       <small
         data-fr="Compte"
-        data-ar="حسابي"
-      ></small>
+        data-ar="حسابي">
+      </small>
 
     </button>
 
   </nav>
 
 
-
   <!-- INSTALL -->
-
   <div
     id="installBox"
-    class="install-box hidden"
-  >
+    class="install-box hidden">
 
     <div>
 
       <strong
         data-fr="Installer Dabber"
-        data-ar="ثبّت Dabber"
-      ></strong>
+        data-ar="ثبّت Dabber">
+      </strong>
 
       <span
         data-fr="Ajoutez Dabber à votre écran d’accueil."
-        data-ar="أضف Dabber إلى الشاشة الرئيسية."
-      ></span>
+        data-ar="أضف Dabber إلى الشاشة الرئيسية.">
+      </span>
 
     </div>
 
-
-    <button id="installBtn">
+    <button
+      id="installBtn"
+      type="button">
       ＋
     </button>
 
   </div>
 
 
-
 <script>
-
 
 /* =====================================================
    LANGUAGE
 ===================================================== */
 
-
 const translations = {
 
   fr: {
-    lang: "ar",
     htmlLang: "fr",
     dir: "ltr"
   },
 
   ar: {
-    lang: "fr",
     htmlLang: "ar",
     dir: "rtl"
   }
@@ -350,11 +293,9 @@ let currentLang =
   localStorage.getItem("dabberLang") || "fr";
 
 
-
 /* =====================================================
    CATEGORIES
 ===================================================== */
-
 
 const categories = [
 
@@ -377,115 +318,82 @@ const categories = [
 ];
 
 
-
 /* =====================================================
    DEMO LISTINGS
 ===================================================== */
 
-
 const demoListings = [
 
   {
-
     id: "demo1",
-
     emoji: "🏠",
-
     title: "Appartement moderne",
-
     city: "Tunis",
-
     price: "80 DT",
-
     period: "nuit",
-
     category: "Logements",
-
     categoryAr: "سكن"
-
   },
 
-
   {
-
     id: "demo2",
-
     emoji: "🚗",
-
     title: "SUV confortable",
-
     city: "Tunis",
-
     price: "180 DT",
-
     period: "jour",
-
     category: "Voitures",
-
-    categoryAr: "سيارة"
-
+    categoryAr: "سيارات"
   },
 
-
   {
-
     id: "demo3",
-
     emoji: "🛠️",
-
     title: "Perceuse professionnelle",
-
     city: "Ariana",
-
     price: "25 DT",
-
     period: "jour",
-
     category: "Matériel",
-
     categoryAr: "معدات"
-
   },
 
-
   {
-
     id: "demo4",
-
     emoji: "🛋️",
-
     title: "Salon complet",
-
     city: "Ben Arous",
-
     price: "50 DT",
-
     period: "jour",
-
     category: "Meubles",
-
     categoryAr: "أثاث"
-
   }
 
 ];
-
 
 
 /* =====================================================
    GET USER LISTINGS
 ===================================================== */
 
-
 function getUserListings() {
 
   try {
 
-    return JSON.parse(
-      localStorage.getItem("dabber_annonces")
-    ) || [];
+    const data =
+      localStorage.getItem("dabber_annonces");
+
+    if (!data) return [];
+
+    const parsed =
+      JSON.parse(data);
+
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
 
   } catch (error) {
+
+    console.error(error);
 
     return [];
 
@@ -494,59 +402,85 @@ function getUserListings() {
 }
 
 
+/* =====================================================
+   ARABIC CATEGORY
+===================================================== */
+
+function getArabicCategory(category) {
+
+  const map = {
+
+    "Véhicules": "سيارات",
+    "Maison": "منزل",
+    "Événements": "مناسبات",
+    "Outils": "معدات",
+    "Électronique": "إلكترونيات",
+    "Mode": "أزياء",
+    "Autres": "أخرى",
+
+    "Logements": "سكن",
+    "Voitures": "سيارات",
+    "Meubles": "أثاث",
+    "Matériel": "معدات",
+    "Événementiel": "مناسبات"
+
+  };
+
+  return map[category] || category;
+
+}
+
 
 /* =====================================================
    CONVERT USER LISTING
 ===================================================== */
 
-
 function convertUserListing(ad) {
 
   let emoji = "📦";
-
 
   if (ad.category === "Véhicules") {
     emoji = "🚗";
   }
 
-  else if (ad.category === "Maison") {
+  if (ad.category === "Maison") {
     emoji = "🏠";
   }
 
-  else if (ad.category === "Événements") {
+  if (ad.category === "Événements") {
     emoji = "🎉";
   }
 
-  else if (ad.category === "Outils") {
+  if (ad.category === "Outils") {
     emoji = "🛠️";
   }
 
-  else if (ad.category === "Électronique") {
+  if (ad.category === "Électronique") {
     emoji = "📱";
   }
 
-  else if (ad.category === "Mode") {
+  if (ad.category === "Mode") {
     emoji = "👗";
   }
 
-
   return {
 
-    id: ad.id,
+    id: ad.id || Date.now(),
 
     emoji: emoji,
 
-    title: ad.title,
+    title: ad.title || "Annonce",
 
-    city: ad.city,
+    city: ad.city || "Tunisie",
 
-    price: ad.price + " DT",
+    price: (ad.price || "0") + " DT",
 
-    period: ad.period,
+    period: ad.period || "jour",
 
-    category: ad.category,
+    category: ad.category || "Autres",
 
-    categoryAr: getArabicCategory(ad.category),
+    categoryAr:
+      getArabicCategory(ad.category || "Autres"),
 
     image: ad.image || ""
 
@@ -555,59 +489,15 @@ function convertUserListing(ad) {
 }
 
 
-
-/* =====================================================
-   ARABIC CATEGORIES
-===================================================== */
-
-
-function getArabicCategory(category) {
-
-  const map = {
-
-    "Véhicules": "سيارات",
-
-    "Maison": "منزل",
-
-    "Événements": "مناسبات",
-
-    "Outils": "معدات",
-
-    "Électronique": "إلكترونيات",
-
-    "Mode": "أزياء",
-
-    "Autres": "أخرى",
-
-    "Logements": "سكن",
-
-    "Voitures": "سيارات",
-
-    "Meubles": "أثاث",
-
-    "Matériel": "معدات",
-
-    "Événementiel": "مناسبات"
-
-  };
-
-
-  return map[category] || category;
-
-}
-
-
-
 /* =====================================================
    ALL LISTINGS
 ===================================================== */
 
-
 function getAllListings() {
 
   const userListings =
-    getUserListings().map(convertUserListing);
-
+    getUserListings()
+      .map(convertUserListing);
 
   return [
 
@@ -620,31 +510,25 @@ function getAllListings() {
 }
 
 
-
 /* =====================================================
    LANGUAGE
 ===================================================== */
 
-
 function applyLanguage() {
 
-  const l = currentLang;
-
-
   document.documentElement.lang =
-    translations[l].htmlLang;
-
+    translations[currentLang].htmlLang;
 
   document.documentElement.dir =
-    translations[l].dir;
+    translations[currentLang].dir;
 
 
   document
     .querySelectorAll("[data-fr]")
-    .forEach(el => {
+    .forEach(element => {
 
-      el.textContent =
-        el.dataset[l];
+      element.textContent =
+        element.dataset[currentLang];
 
     });
 
@@ -654,28 +538,27 @@ function applyLanguage() {
 
 
   input.placeholder =
-    input.dataset["placeholder-" + l];
+    input.dataset[
+      "placeholder-" + currentLang
+    ];
 
 
   document.getElementById("langBtn").textContent =
-    l === "fr"
+    currentLang === "fr"
       ? "العربية 🇹🇳"
       : "Français 🇫🇷";
 
 
   renderCategories();
 
-
   renderListings();
 
 }
 
 
-
 /* =====================================================
    RENDER CATEGORIES
 ===================================================== */
-
 
 function renderCategories() {
 
@@ -684,31 +567,179 @@ function renderCategories() {
 
 
   box.innerHTML =
-    categories.map(c => `
+    categories.map(category => {
 
-      <button
-        class="cat"
-        data-search="${currentLang === "fr" ? c[1] : c[2]}"
-      >
+      const name =
+        currentLang === "fr"
+          ? category[1]
+          : category[2];
 
-        <span>${c[0]}</span>
 
-        <b>
-          ${currentLang === "fr" ? c[1] : c[2]}
-        </b>
+      return `
 
-      </button>
+        <button
+          class="cat"
+          type="button"
+          data-search="${name}">
 
-    `).join("");
+          <span>
+            ${category[0]}
+          </span>
+
+          <b>
+            ${name}
+          </b>
+
+        </button>
+
+      `;
+
+    }).join("");
 
 }
 
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHtml(value) {
+
+  return String(value || "")
+
+    .replace(/&/g, "&amp;")
+
+    .replace(/</g, "&lt;")
+
+    .replace(/>/g, "&gt;")
+
+    .replace(/"/g, "&quot;")
+
+    .replace(/'/g, "&#039;");
+
+}
+
+
+/* =====================================================
+   PERIOD
+===================================================== */
+
+function getPeriod(period) {
+
+  if (currentLang === "ar") {
+
+    if (period === "jour")
+      return "اليوم";
+
+    if (period === "semaine")
+      return "الأسبوع";
+
+    if (period === "mois")
+      return "الشهر";
+
+    if (period === "nuit")
+      return "الليلة";
+
+  }
+
+
+  if (period === "jour")
+    return "jour";
+
+  if (period === "semaine")
+    return "semaine";
+
+  if (period === "mois")
+    return "mois";
+
+  if (period === "nuit")
+    return "nuit";
+
+
+  return period || "jour";
+
+}
+
+
+/* =====================================================
+   FAVORITES
+===================================================== */
+
+function getFavorites() {
+
+  try {
+
+    const data =
+      localStorage.getItem("dabber_favorites");
+
+    if (!data) return [];
+
+    const parsed =
+      JSON.parse(data);
+
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
+
+  } catch {
+
+    return [];
+
+  }
+
+}
+
+
+function isFavorite(id) {
+
+  return getFavorites()
+    .includes(String(id));
+
+}
+
+
+function toggleFavorite(event, id) {
+
+  event.stopPropagation();
+
+
+  let favorites =
+    getFavorites();
+
+
+  id = String(id);
+
+
+  if (favorites.includes(id)) {
+
+    favorites =
+      favorites.filter(
+        item => item !== id
+      );
+
+  } else {
+
+    favorites.push(id);
+
+  }
+
+
+  localStorage.setItem(
+    "dabber_favorites",
+    JSON.stringify(favorites)
+  );
+
+
+  renderListings(
+    document.getElementById("searchInput").value
+  );
+
+}
 
 
 /* =====================================================
    RENDER LISTINGS
 ===================================================== */
-
 
 function renderListings(filter = "") {
 
@@ -721,33 +752,47 @@ function renderListings(filter = "") {
 
 
   const search =
-    filter.toLowerCase().trim();
+    String(filter)
+      .toLowerCase()
+      .trim();
 
 
-  const arr =
+  const results =
     all.filter(ad => {
 
-      if (!search) {
-        return true;
-      }
+      if (!search) return true;
 
 
       return (
 
-        ad.title.toLowerCase().includes(search) ||
+        String(ad.title)
+          .toLowerCase()
+          .includes(search)
 
-        ad.city.toLowerCase().includes(search) ||
+        ||
 
-        ad.category.toLowerCase().includes(search) ||
+        String(ad.city)
+          .toLowerCase()
+          .includes(search)
 
-        ad.categoryAr.toLowerCase().includes(search)
+        ||
+
+        String(ad.category)
+          .toLowerCase()
+          .includes(search)
+
+        ||
+
+        String(ad.categoryAr)
+          .toLowerCase()
+          .includes(search)
 
       );
 
     });
 
 
-  if (!arr.length) {
+  if (!results.length) {
 
     box.innerHTML = `
 
@@ -768,69 +813,55 @@ function renderListings(filter = "") {
   }
 
 
-
   box.innerHTML =
-    arr.map(ad => {
-
+    results.map(ad => {
 
       const category =
         currentLang === "fr"
-        ? ad.category
-        : ad.categoryAr;
-
-
-      const period =
-        getPeriod(ad.period);
+          ? ad.category
+          : ad.categoryAr;
 
 
       const favorite =
         isFavorite(ad.id);
 
 
-      let imageContent = "";
+      const image =
+        ad.image
+          ? `
 
+            <img
+              src="${ad.image}"
+              alt="${escapeHtml(ad.title)}"
+            >
 
-      if (ad.image) {
+          `
+          : `
 
-        imageContent = `
+            <span class="demo-emoji">
+              ${ad.emoji}
+            </span>
 
-          <img
-            src="${ad.image}"
-            alt="${escapeHtml(ad.title)}"
-          >
-
-        `;
-
-      }
-
-      else {
-
-        imageContent = `
-          <span class="demo-emoji">
-            ${ad.emoji}
-          </span>
-        `;
-
-      }
+          `;
 
 
       return `
 
         <article
           class="card"
-          data-id="${ad.id}"
-        >
+          data-id="${ad.id}">
 
           <div class="card-image">
 
-            ${imageContent}
-
+            ${image}
 
             <button
               class="heart ${favorite ? "liked" : ""}"
-              onclick="toggleFavorite(event,'${ad.id}')"
-            >
+              type="button"
+              onclick="toggleFavorite(event,'${ad.id}')">
+
               ${favorite ? "♥" : "♡"}
+
             </button>
 
           </div>
@@ -839,7 +870,7 @@ function renderListings(filter = "") {
           <div class="card-body">
 
             <div class="tag">
-              ${category}
+              ${escapeHtml(category)}
             </div>
 
 
@@ -854,10 +885,13 @@ function renderListings(filter = "") {
 
 
             <strong>
+
               ${escapeHtml(ad.price)}
+
               <small>
-                / ${period}
+                / ${getPeriod(ad.period)}
               </small>
+
             </strong>
 
           </div>
@@ -871,227 +905,98 @@ function renderListings(filter = "") {
 }
 
 
-
-/* =====================================================
-   PERIOD
-===================================================== */
-
-
-function getPeriod(period) {
-
-  if (currentLang === "ar") {
-
-    if (period === "jour") return "اليوم";
-
-    if (period === "semaine") return "الأسبوع";
-
-    if (period === "mois") return "الشهر";
-
-    if (period === "nuit") return "الليلة";
-
-  }
-
-
-  if (period === "jour") return "jour";
-
-  if (period === "semaine") return "semaine";
-
-  if (period === "mois") return "mois";
-
-  if (period === "nuit") return "nuit";
-
-
-  return period || "jour";
-
-}
-
-
-
-/* =====================================================
-   ESCAPE HTML
-===================================================== */
-
-
-function escapeHtml(value) {
-
-  return String(value || "")
-
-    .replace(/&/g, "&amp;")
-
-    .replace(/</g, "&lt;")
-
-    .replace(/>/g, "&gt;")
-
-    .replace(/"/g, "&quot;")
-
-    .replace(/'/g, "&#039;");
-
-}
-
-
-
-/* =====================================================
-   FAVORITES
-===================================================== */
-
-
-function getFavorites() {
-
-  try {
-
-    return JSON.parse(
-      localStorage.getItem("dabber_favorites")
-    ) || [];
-
-  }
-
-  catch {
-
-    return [];
-
-  }
-
-}
-
-
-
-function isFavorite(id) {
-
-  return getFavorites().includes(String(id));
-
-}
-
-
-
-function toggleFavorite(event, id) {
-
-  event.stopPropagation();
-
-
-  let favorites =
-    getFavorites();
-
-
-  id = String(id);
-
-
-  if (favorites.includes(id)) {
-
-    favorites =
-      favorites.filter(x => x !== id);
-
-  }
-
-  else {
-
-    favorites.push(id);
-
-  }
-
-
-  localStorage.setItem(
-    "dabber_favorites",
-    JSON.stringify(favorites)
-  );
-
-
-  renderListings(
-    document.getElementById("searchInput").value
-  );
-
-}
-
-
-
 /* =====================================================
    LANGUAGE BUTTON
 ===================================================== */
 
+document
+  .getElementById("langBtn")
+  .onclick = function() {
 
-document.getElementById("langBtn").onclick = () => {
-
-  currentLang =
-    currentLang === "fr"
-    ? "ar"
-    : "fr";
-
-
-  localStorage.setItem(
-    "dabberLang",
-    currentLang
-  );
+    currentLang =
+      currentLang === "fr"
+        ? "ar"
+        : "fr";
 
 
-  applyLanguage();
+    localStorage.setItem(
+      "dabberLang",
+      currentLang
+    );
 
-};
 
+    applyLanguage();
+
+  };
 
 
 /* =====================================================
    SEARCH
 ===================================================== */
 
+document
+  .getElementById("searchBtn")
+  .onclick = function() {
 
-document.getElementById("searchBtn").onclick = () => {
-
-  renderListings(
-    document.getElementById("searchInput").value
-  );
+    const value =
+      document.getElementById("searchInput").value;
 
 
-  document
-    .querySelector(".listings-section")
-    .scrollIntoView({
-      behavior: "smooth"
-    });
+    renderListings(value);
 
-};
 
+    document
+      .querySelector(".listings-section")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+
+  };
 
 
 document
   .getElementById("searchInput")
-  .addEventListener("keydown", e => {
+  .addEventListener(
+    "keydown",
+    function(event) {
 
-    if (e.key === "Enter") {
+      if (event.key === "Enter") {
 
-      renderListings(e.target.value);
+        renderListings(
+          event.target.value
+        );
 
-      document
-        .querySelector(".listings-section")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
+      }
 
     }
-
-  });
-
+  );
 
 
 /* =====================================================
-   CATEGORIES CLICK
+   CATEGORY CLICK
 ===================================================== */
 
+document.addEventListener(
+  "click",
+  function(event) {
 
-document.addEventListener("click", e => {
-
-  const cat =
-    e.target.closest(".cat");
-
-
-  if (cat) {
-
-    const search =
-      cat.dataset.search;
+    const category =
+      event.target.closest(".cat");
 
 
-    document.getElementById("searchInput")
-      .value = search;
+    if (!category) return;
 
 
-    renderListings(search);
+    const value =
+      category.dataset.search;
+
+
+    document.getElementById(
+      "searchInput"
+    ).value = value;
+
+
+    renderListings(value);
 
 
     document
@@ -1101,332 +1006,280 @@ document.addEventListener("click", e => {
       });
 
   }
-
-});
-
+);
 
 
 /* =====================================================
-   ADD LISTING
+   ADD ANNOUNCEMENT
 ===================================================== */
 
+document
+  .getElementById("addBtn")
+  .onclick = function() {
 
-document.getElementById("addBtn").onclick = () => {
+    window.location.href =
+      "ajouter.html";
 
-  window.location.href =
-    "ajouter.html";
-
-};
-
+  };
 
 
 /* =====================================================
-   SEARCH BOTTOM BUTTON
+   BOTTOM SEARCH
 ===================================================== */
 
+document
+  .getElementById("bottomSearch")
+  .onclick = function() {
 
-document.getElementById("bottomSearch").onclick = () => {
+    const input =
+      document.getElementById("searchInput");
 
-  document.getElementById("searchInput").focus();
+
+    input.focus();
 
 
-  window.scrollTo({
+    window.scrollTo({
 
-    top: 0,
+      top: 0,
 
-    behavior: "smooth"
+      behavior: "smooth"
 
-  });
+    });
 
-};
-
+  };
 
 
 /* =====================================================
    HOME
 ===================================================== */
 
+document
+  .getElementById("homeBtn")
+  .onclick = function() {
 
-document.getElementById("homeBtn").onclick = () => {
+    document.getElementById(
+      "searchInput"
+    ).value = "";
 
-  document.getElementById("searchInput").value = "";
 
-  renderListings();
+    renderListings();
 
-  window.scrollTo({
 
-    top: 0,
+    window.scrollTo({
 
-    behavior: "smooth"
+      top: 0,
 
-  });
+      behavior: "smooth"
 
-};
+    });
 
+  };
 
 
 /* =====================================================
    SHOW ALL
 ===================================================== */
 
+document
+  .getElementById("showAll")
+  .onclick = function() {
 
-document.getElementById("showAll").onclick = () => {
-
-  document.getElementById("searchInput").value = "";
-
-  renderListings();
-
-
-  document
-    .querySelector(".listings-section")
-    .scrollIntoView({
-      behavior: "smooth"
-    });
-
-};
+    document.getElementById(
+      "searchInput"
+    ).value = "";
 
 
+    renderListings();
 
-document.getElementById("seeCategories").onclick = () => {
 
-  document
-    .querySelector(".categories")
-    .scrollIntoView({
-      behavior: "smooth"
-    });
+    document
+      .querySelector(".listings-section")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
 
-};
+  };
 
+
+document
+  .getElementById("seeCategories")
+  .onclick = function() {
+
+    document
+      .querySelector(".categories")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+
+  };
 
 
 /* =====================================================
-   FAVORITES BUTTON
+   FAVORITES
 ===================================================== */
 
+document
+  .getElementById("favoritesBtn")
+  .onclick = function() {
 
-document.getElementById("favoritesBtn").onclick = () => {
-
-  const favorites =
-    getFavorites();
-
-
-  const all =
-    getAllListings();
+    const favorites =
+      getFavorites();
 
 
-  const favoriteListings =
-    all.filter(ad =>
-      favorites.includes(String(ad.id))
-    );
+    const all =
+      getAllListings();
 
 
-  const box =
-    document.getElementById("listings");
+    const results =
+      all.filter(ad =>
+        favorites.includes(
+          String(ad.id)
+        )
+      );
 
 
-  if (!favoriteListings.length) {
-
-    box.innerHTML = `
-
-      <div class="empty">
-
-        ${
-          currentLang === "fr"
-          ? "Vous n'avez pas encore de favoris ❤️"
-          : "ما عندك حتى إعلان في المفضلة ❤️"
-        }
-
-      </div>
-
-    `;
-
-  }
-
-  else {
-
-    box.innerHTML =
-      favoriteListings.map(ad => {
-
-        const category =
-          currentLang === "fr"
-          ? ad.category
-          : ad.categoryAr;
+    const box =
+      document.getElementById("listings");
 
 
-        return `
+    if (!results.length) {
 
-          <article
-            class="card"
-            data-id="${ad.id}"
-          >
+      box.innerHTML = `
 
-            <div class="card-image">
+        <div class="empty">
 
-              ${
-                ad.image
-                ? `<img src="${ad.image}" alt="">`
-                : `<span class="demo-emoji">${ad.emoji}</span>`
-              }
+          ${
+            currentLang === "fr"
+            ? "Vous n'avez pas encore de favoris ❤️"
+            : "ما عندك حتى إعلان في المفضلة ❤️"
+          }
+
+        </div>
+
+      `;
+
+    } else {
+
+      box.innerHTML =
+        results.map(ad => {
+
+          const category =
+            currentLang === "fr"
+              ? ad.category
+              : ad.categoryAr;
 
 
-              <button
-                class="heart liked"
-                onclick="toggleFavorite(event,'${ad.id}')"
-              >
-                ♥
-              </button>
-
-            </div>
+          const image =
+            ad.image
+              ? `<img src="${ad.image}" alt="">`
+              : `<span class="demo-emoji">${ad.emoji}</span>`;
 
 
-            <div class="card-body">
+          return `
 
-              <div class="tag">
-                ${category}
+            <article class="card">
+
+              <div class="card-image">
+
+                ${image}
+
+                <button
+                  class="heart liked"
+                  type="button"
+                  onclick="toggleFavorite(event,'${ad.id}')">
+
+                  ♥
+
+                </button>
+
               </div>
 
 
-              <h3>
-                ${escapeHtml(ad.title)}
-              </h3>
+              <div class="card-body">
+
+                <div class="tag">
+                  ${escapeHtml(category)}
+                </div>
+
+                <h3>
+                  ${escapeHtml(ad.title)}
+                </h3>
+
+                <p>
+                  ⌖ ${escapeHtml(ad.city)}
+                </p>
+
+                <strong>
+                  ${escapeHtml(ad.price)}
+                </strong>
+
+              </div>
+
+            </article>
+
+          `;
+
+        }).join("");
+
+    }
 
 
-              <p>
-                ⌖ ${escapeHtml(ad.city)}
-              </p>
+    document
+      .querySelector(".listings-section")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
 
-
-              <strong>
-                ${escapeHtml(ad.price)}
-              </strong>
-
-            </div>
-
-          </article>
-
-        `;
-
-      }).join("");
-
-  }
-
-
-  document
-    .querySelector(".listings-section")
-    .scrollIntoView({
-      behavior: "smooth"
-    });
-
-};
-
+  };
 
 
 /* =====================================================
    ACCOUNT
 ===================================================== */
 
-
-document.getElementById("accountBtn").onclick = () => {
-
-  if (currentLang === "fr") {
-
-    alert(
-      "La page du compte sera ajoutée prochainement 👤"
-    );
-
-  }
-
-  else {
+document
+  .getElementById("accountBtn")
+  .onclick = function() {
 
     alert(
-      "صفحة الحساب سنضيفها قريبًا 👤"
+
+      currentLang === "fr"
+
+        ? "La page du compte sera ajoutée prochainement 👤"
+
+        : "صفحة الحساب سنضيفها قريبًا 👤"
+
     );
 
-  }
-
-};
-
+  };
 
 
 /* =====================================================
    PWA INSTALL
 ===================================================== */
 
-
-let deferredPrompt;
+let deferredPrompt = null;
 
 
 window.addEventListener(
   "beforeinstallprompt",
-  e => {
+  function(event) {
 
-    e.preventDefault();
+    event.preventDefault();
 
 
-    deferredPrompt = e;
+    deferredPrompt =
+      event;
 
 
     document
       .getElementById("installBox")
-      .classList.remove("hidden");
+      .classList
+      .remove("hidden");
 
   }
 );
 
 
-
-document.getElementById("installBtn").onclick =
-  async () => {
-
-    if (!deferredPrompt) return;
-
-
-    deferredPrompt.prompt();
-
-
-    deferredPrompt = null;
-
-
-    document
-      .getElementById("installBox")
-      .classList.add("hidden");
-
-  };
-
-
-
-/* =====================================================
-   UPDATE WHEN RETURNING TO PAGE
-===================================================== */
-
-
-window.addEventListener("pageshow", () => {
-
-  renderListings(
-    document.getElementById("searchInput").value
-  );
-
-});
-
-
-
-/* =====================================================
-   START
-===================================================== */
-
-
-window.addEventListener("load", () => {
-
-  applyLanguage();
-
-
-  setTimeout(() => {
-
-    document
-      .getElementById("splash")
-      .classList.add("hide");
-
-  }, 700);
-
-
-  if ("serviceWo
+document
+  .getEle
